@@ -17,12 +17,13 @@ uploaded_file = st.file_uploader("Upload a CSV File",type=["csv"])
 if uploaded_file:
     st.write("File uploaded successfully")
     
+api = st.secrets["OPENAI_API_KEY"]
 
 def main():
     load_dotenv()
     
     if uploaded_file is not None:
-       llm = ChatOpenAI(temperature=0, model="gpt-3.5-turbo-0613")
+       llm = ChatOpenAI(temperature=0,openai_api_key=api, model="gpt-3.5-turbo-0613")
        
        path = uploaded_file.name
 

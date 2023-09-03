@@ -5,17 +5,8 @@ from langchain.agents.agent_types import AgentType
 from langchain.callbacks import StreamlitCallbackHandler
 from langchain.agents import create_csv_agent
 load_dotenv()
+   
 
-
-
-
-
-
-
-
-
-    
-api = st.secrets["OPENAI_API_KEY"]
 
 def main():
     load_dotenv()
